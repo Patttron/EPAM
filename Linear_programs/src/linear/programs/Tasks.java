@@ -6,7 +6,7 @@ public class Tasks {
     void first() {
         double z, a = 5.33, b = 3.44, c = 8.11;
         z = ((a - 3) * b / 2) + c;
-        System.out.printf("Значение выражения, если a = %.3f, b = %.3f, c = %.3f равно " + z, a, b, c);
+        System.out.printf("Р—РЅР°С‡РµРЅРёРµ РІС‹СЂР°Р¶РµРЅРёСЏ, РµСЃР»Рё a = %.3f, b = %.3f, c = %.3f СЂР°РІРЅРѕ " + z, a, b, c);
         System.out.println("\n---------------");
     }
 
@@ -26,10 +26,10 @@ public class Tasks {
 
     void forth() {
         double x = 333.555;
-        System.out.println("Дано число " + x);
+        System.out.println("Р”Р°РЅРѕ С‡РёСЃР»Рѕ " + x);
         double a = (x * 1000) % 1000;
         double b = (int) x / 1000.0;
-        System.out.print("Поменяли целую и дробную часть: " + (a + b));
+        System.out.print("РџРѕРјРµРЅСЏР»Рё С†РµР»СѓСЋ Рё РґСЂРѕР±РЅСѓСЋ С‡Р°СЃС‚СЊ: " + (a + b));
         System.out.println("\n---------------");
     }
 

@@ -6,7 +6,7 @@ public class Main {
         Tasks.first();
         Tasks.second();
         Tasks.third();
-        Tasks.forth();
+        Tasks.fourth();
         Tasks.fifth();
         Tasks.sixth();
     }

@@ -64,12 +64,8 @@ public class Tasks {
         double x = scan.nextDouble();
         System.out.print("Enter y: ");
         double y = scan.nextDouble();
-        if ((x >= -2 && x <= 2 && y >= 0 && y <= 4) ||
-                (x >= -4 && x <= 4 && y >= -3 && y <= 0)) {
-            a = true;
-        } else {
-            a = false;
-        }
+        a = ((x >= -2 && x <= 2 && y >= 0 && y <= 4) ||
+                (x >= -4 && x <= 4 && y >= -3 && y <= 0));
         System.out.print(a);
         System.out.println("\n---------------");
     }

@@ -7,14 +7,13 @@ public class Branch {
         System.out.println("Даны два угла треугольника (в градусах)." +
                 "Определить, существует ли такой треугольник, и если да, то будет ли он прямоугольным.");
         Scanner scan = new Scanner(System.in);
-        for ( ; ; ) {
             System.out.print("Enter first value of angle: ");
             double a = scan.nextDouble();
             System.out.print("Enter second value of angle: ");
             double b = scan.nextDouble();
             if (a + b < 180) {
                 System.out.print("This triangle exists");
-                if (a == 90 || b == 90) {
+                if (a == 90 || b == 90 || a + b == 90) {
                     System.out.println(", and it is rectangular.");
                 } else {
                     System.out.println(", but it isn't rectangular.");
@@ -24,7 +23,6 @@ public class Branch {
                 System.out.println("Such a triangle cannot be. Try again");
             }
         }
-    }
 
     static void task2() {
         System.out.println("\n---------------");
@@ -41,7 +39,7 @@ public class Branch {
         int d = scan.nextInt();
         x = Math.min(a, b);
         y = Math.min(c, d);
-        System.out.println(Math.max(x, y));
+        System.out.print(Math.max(x, y));
         System.out.println("\n---------------");
     }
 
@@ -54,12 +52,12 @@ public class Branch {
         x1 = scan.nextDouble();
         System.out.print("Enter y1: ");
         y1 = scan.nextDouble();
-        System.out.println("Enter the coordinates of the first point: ");
+        System.out.println("Enter the coordinates of the second point: ");
         System.out.print("Enter x2: ");
         x2 = scan.nextDouble();
         System.out.print("Enter y2: ");
         y2 = scan.nextDouble();
-        System.out.println("Enter the coordinates of the first point: ");
+        System.out.println("Enter the coordinates of the third point: ");
         System.out.print("Enter x3: ");
         x3 = scan.nextDouble();
         System.out.print("Enter y3: ");
@@ -108,11 +106,11 @@ public class Branch {
         x = scan.nextDouble();
         if (x <= 3) {
             a = x * x - 3 * x + 9;
-            System.out.print("Answer of function: " + a);
-        } else {
-            a = 1 / (Math.pow(x, 3) + 6);
-            System.out.print("Answer of function: " + a);
         }
+        else {
+            a = 1 / (Math.pow(x, 3) + 6);
+        }
+        System.out.print("Answer of function: " + a);
         System.out.println("\n---------------");
     }
 }

@@ -40,7 +40,7 @@ public class Loops {
             if (i > 2) {
                 y = i;
             } else {
-                y = i * -1;
+                y = -i;
             }
             System.out.printf("|%-11f|%-11f|\n", i, y);
         }
@@ -92,7 +92,7 @@ public class Loops {
     }
 
     static void loop7(){
-        System.out.println("Для каждого натурального числа в промежутке от m до n вывести все делители, кроме единицы и самого числа." +
+        System.out.println("Для каждого натурального числа в промежутке от m до n вывести все делители, кроме единицы и самого числа. " +
                 "m и n вводятся с клавиатуры.");
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter n: ");
@@ -101,7 +101,7 @@ public class Loops {
         int m = scan.nextInt();
         for (int i = n; i <= m; i++) {
             System.out.print("\n" + i +  " divisible by: ");
-            for (int j = 2; j < i; j++) {
+            for (int j = 2; j <= i/2; j++) {
                 if (i % j == 0) {
                     System.out.print(j + " ");
                 }
@@ -112,16 +112,20 @@ public class Loops {
 
     static void loop8(){
         System.out.println("Даны два числа. Определить цифры, входящие в запись как первого так и второго числа.");
-        int m1, m2, n1 = 123, n2 = 987456;
-        int res1, res2;
-        m1 = Math.min(n1, n2);
-        m2 = Math.max(n1, n2);
-        while (m2 != 0) {
-            res1 = m1 % 10;
-            res2 = m2 % 10;
-            System.out.println(((m1 == 0) ? " " : res1) + "  " + res2);
-            m1 /= 10;
-            m2 /= 10;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите а: ");
+        int a = scan.nextInt();
+        System.out.println("Введите b: ");
+        int b = scan.nextInt();
+        int[] arr = new int[10];
+        while(a != 0){
+            arr[a % 10]++;
+            a /=10;
+        }
+        while(b != 0){
+            if(arr[b % 10] != 0)
+                System.out.println(b % 10);
+            b /=10;
         }
     }
 }
